@@ -1,0 +1,24 @@
+body > header > ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+body > header > ul > li > .cart:hover {
+    background-color: #cfc4a6;
+}
+
+body > main > .description {
+    margin-top: 7vh;
+    display: flex;
+    justify-content: center;
+    border: 3px solid black;
+    width: 150vh;
+    padding: 70px;
+    border-radius: 100px 25px;
+}
+
+body > main > .description > .text > p {
+    font-size: 75px;
+}

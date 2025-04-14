@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="/static/css/registration.css">
+    <title>Vostok</title>
+</head>
+<body>
+    <header>
+        <h1>Vostok</h1>
+        <a href="#login">У меня уже есть аккаунт <img src="/static/images/registration/person_celebrate_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt=""></a>
+    </header>
+    <main>
+        <form class="registration-form" id="registerForm">
+            <div class="form-group"> 
+                <input type="text" placeholder="Имя" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <input type="email" placeholder="Электронная почта" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <input type="password" placeholder="Пароль" id="password" name="password" required>
+            </div>
+            <button type="submit" class="register-btn">Продолжить</button>
+        </form>
+
+        <div id="responseMessage" class="response-message"></div>
+    </main>
+    <script src="/static/js/register.js"></script>
+</body>
+</html>
