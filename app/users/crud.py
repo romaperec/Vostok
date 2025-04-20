@@ -1,11 +1,9 @@
-from fastapi import Depends, HTTPException, status
+from fastapi import HTTPException, status
 from sqlalchemy import select
-from app.core.database import get_session
 
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.users.models import UserModel
-from app.users.schemas import UserSchema
 from app.users.service import hash_password
 
 
