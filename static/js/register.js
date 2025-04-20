@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
         
-        // 1. Собираем данные
         const formData = {
             name: document.getElementById('name').value.trim(),
             email: document.getElementById('email').value.trim(),
@@ -14,7 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log("Отправляемые данные:", formData);
 
         try {
-            // 2. Отправляем на сервер
             const response = await fetch('http://127.0.0.1:8000/register', {
                 method: 'POST',
                 headers: {
@@ -25,7 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
             console.log("Статус ответа:", response.status);
 
-            // 3. Обрабатываем ответ
             if (!response.ok) {
                 const errorData = await response.json();
                 console.error("Ошибка сервера:", errorData);
