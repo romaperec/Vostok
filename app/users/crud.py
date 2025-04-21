@@ -36,5 +36,9 @@ async def login(user_email, user_password, db: AsyncSession):
             status_code=status.HTTP_404_NOT_FOUND, detail="Account not found"
         )
 
-    if verify_password(user_password, user_db.password):
-        return user_db
+    if not verify_password(user_password, user_db.password):
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid password or email"
+        )
+
+    return {"message": "OK"}

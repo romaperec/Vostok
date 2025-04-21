@@ -7,5 +7,5 @@ class UserModel(Base):
 
     id: Mapped[int] = mapped_column(primary_key=True)
     name: Mapped[str]
-    email: Mapped[str]
+    email: Mapped[str] = mapped_column(index=True)
     password: Mapped[str]
