@@ -1,0 +1,72 @@
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 160px);
+}
+
+.login-container h2 {
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 15px 20px;
+    border: 2px solid #000;
+    border-radius: 50px;
+    font-family: "Unbounded", sans-serif;
+    font-size: 1rem;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 15px;
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    font-family: "Unbounded", sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.login-btn:hover {
+    background: #a6b0cf;
+    color: #000;
+}
+
+.register-link {
+    margin-top: 20px;
+    font-family: "Unbounded", sans-serif;
+}
+
+.register-link a {
+    color: #000;
+    font-weight: 600;
+}
+
+.response-message {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+}
+
+.response-message.error {
+    display: block;
+    background-color: #ffebee;
+    color: #c62828;
+}
+
+.response-message.success {
+    display: block;
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}

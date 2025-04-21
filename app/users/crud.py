@@ -5,7 +5,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.users.models import UserModel
 from app.users.service import hash_password
-
+from app.users.service import verify_password
 
 async def create(user_name, user_email, user_password, db: AsyncSession):
     check_email = await db.execute(
@@ -24,3 +24,18 @@ async def create(user_name, user_email, user_password, db: AsyncSession):
 
     db.add(user)
     await db.commit()
+
+
+async def login(user_email, user_password, db: AsyncSession):
+    user_db = await db.execute(
+        select(UserModel).where(UserModel.email == user_email)
+    )
+    user_db = user_db.scalar_one_or_none()
+
+    if not user_db:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND, detail="Account not found"
+        )
+    
+    if verify_password(user_password, user_db.password):
+        return user_db

@@ -6,15 +6,16 @@
     <link rel="icon" href="/static/images/logo.ico" sizes="any">
     <link rel="stylesheet" href="/static/css/main.css">
     <link rel="stylesheet" href="/static/css/registration.css">
-    <title>Vostok</title>
+    <title>Vostok | Регистрация</title>
 </head>
 <body>
     <header>
         <h1>Vostok</h1>
-        <a href="#login">У меня уже есть аккаунт <img src="/static/images/registration/person_celebrate_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt=""></a>
+        <a href="/app/templates/login.html">У меня уже есть аккаунт <img src="/static/images/registration/person_celebrate_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt=""></a>
     </header>
     <main>
         <form class="registration-form" id="registerForm">
+            <h2>Регистрация аккаунта</h2>
             <div class="form-group"> 
                 <input type="text" placeholder="Имя" id="name" name="name" required>
             </div>
@@ -26,8 +27,6 @@
             </div>
             <button type="submit" class="register-btn">Продолжить</button>
         </form>
-
-        <div id="responseMessage" class="response-message"></div>
     </main>
     <script src="/static/js/register.js"></script>
 </body>
